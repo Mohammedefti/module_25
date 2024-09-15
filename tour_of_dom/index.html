@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <title>Tour of DOM</title>
+    <style>
+        .fruits-container li{
+            color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet ;
+            /* background-color:aquamarine ; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quasi voluptatibus quidem ipsum? Facilis rem ipsum hic ratione perferendis autem. Nisi omnis fuga molestiae rerum ducimus aspernatur laudantium consequatur iure?</p>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>My Awsome DOM de baba</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Shafayet</li>
+            <li>bonobash</li>
+            <li>DOM de re baba</li>
+        </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class random-class blue-bg ">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul id="places-list">
+                <li class="important-places">Sundorban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Katabon</li>
+                <li class="other-place">Cox's Bazar</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="../js/dom.js"></script>
+    <script src="../js/append.js"></script>
+     <script src="../js/stylejs.js"></script>
+     <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        // const student ={
+        //     name: 'ABUL',
+        //     ID: 11,
+        //     study :function (time) {
+        //         console.log(time, 'study kortase');
+        //     }
+        // }
+       for (const li of liCollection) {
+        // console.log(li.innerText);
+       }
+       const allHeadings = document.getElementsByTagName('h1');
+       for (const h1 of allHeadings) {
+        // console.log(h1.innerText);
+       }
+
+       const fruitsTitle = document.getElementById('fruits-title');
+       fruitsTitle.innerText = 'Fruits changed by JS';
+       const places = document.getElementsByClassName('important-places');
+       for (const place of places) {
+        // console.log(place.innerText)
+       }
+
+    //    querySelectorAll
+    const someLi = document.querySelectorAll('.fruits-container li');
+    for(const li of someLi){
+        // console.log(li.innerText);
+    }
+    </script>
+</body>
+</html>
